@@ -11,11 +11,11 @@ class OrderItem(models.Model):
     order = models.ForeignKey(OrderProcess, on_delete=models.CASCADE)
     title = models.CharField(max_length=150)
     quantity = models.IntegerField(default=1)
-    reserved = models.NullBooleanField()
+    reserved = models.BooleanField(null=True)
 
 
 class CustomerVerificationProcess(Subprocess):
-    trusted = models.NullBooleanField()
+    trusted = models.BooleanField(null=True)
 
 
 class OrderItemProcess(Subprocess):

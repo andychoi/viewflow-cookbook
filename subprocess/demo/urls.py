@@ -13,11 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include
+from django.urls import re_path, include
 from django.views import generic
 from material.frontend import urls as frontend_urls
 
 urlpatterns = [
-    url(r'^$', generic.RedirectView.as_view(url='/workflow/', permanent=False)),
-    url(r'', include(frontend_urls)),
+    re_path(r'^$', generic.RedirectView.as_view(url='/workflow/', permanent=False)),
+    re_path(r'', include(frontend_urls)),
 ]

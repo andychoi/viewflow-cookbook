@@ -3,3 +3,87 @@ node_modules
 .tox
 *.pyc
 db.sqlite3
+
+
+cr_env
+
+# Files to ignore when building Docker image, basically the same than .gitignore
+
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+sqlite3.db
+media
+
+# Backup files # 
+*.bak 
+
+# Python # 
+*.py[cod] 
+*$py.class 
+
+# Installer logs 
+pip-log.txt 
+pip-delete-this-directory.txt 
+
+# Staticfiles
+staticfiles/
+# Static files collected
+/static
+
+# Log files
+*.log
+*.log.*
+
+# IDE files
+.idea
+*.iml
+*.ipr
+*.iws
+.settings
+.project
+.pydevproject
+.directory
+
+# Script for different environments
+prod.sh
+dev.sh
+
+
+# Jupyter Notebook 
+.ipynb_checkpoints 
+
+# pyenv 
+.python-version 
+
+# Virtual environments
+venv*/
+.venv*/
+/.env*
+
+# Unit test / coverage reports 
+htmlcov/ 
+.tox/ 
+.coverage 
+.coverage.* 
+.cache 
+.pytest_cache/ 
+nosetests.xml 
+coverage.xml 
+*.cover 
+.hypothesis/ 
+
+# celery 
+celerybeat-schedule.* 
+
+
+# Visual Studio Code # 
+.vscode/* 
+!.vscode/settings.json 
+!.vscode/tasks.json 
+!.vscode/launch.json 
+!.vscode/extensions.json 
+.history
