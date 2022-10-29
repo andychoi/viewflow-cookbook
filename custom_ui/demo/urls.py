@@ -1,9 +1,9 @@
 from django.views import generic
-from django.conf.urls import url, include
+from django.urls import re_path, include
 
 
 urlpatterns = [
-    url('^$', generic.TemplateView.as_view(template_name='index.html')),
-    url('^parcel/', include('demo.parcel.urls')),
-    url('^accounts/', include('django.contrib.auth.urls')),
+    re_path('^$', generic.TemplateView.as_view(template_name='index.html')),
+    re_path('^parcel/', include('demo.parcel.urls')),
+    re_path('^accounts/', include('django.contrib.auth.urls')),
 ]
