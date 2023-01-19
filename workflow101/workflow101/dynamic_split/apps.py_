@@ -1,0 +1,6 @@
+from django.apps import AppConfig
+
+
+class DynamicSplitConfig(AppConfig):
+    name = 'workflow101.dynamicsplit'
+    app_label = 'dynamicsplit'

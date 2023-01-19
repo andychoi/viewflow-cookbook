@@ -1,0 +1,6 @@
+from django.apps import AppConfig
+
+
+class HellorestConfig(AppConfig):
+    name = 'workflow101.hellorest'
+    app_label = 'hellorest'
